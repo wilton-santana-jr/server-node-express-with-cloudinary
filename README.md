@@ -15,11 +15,11 @@ npm install
 
 # Crie um arquivo na raiz do projeto chamado .env e configure o arquivo .env em um editor de texto para adicionar as variáveis de ambiente do cloudinary
 
-cloud_name='<seu nome do cloudinary>' 
-api_key='<sua api key do cloudinary>' 
-api_secret='<sua secret api do cloudinary>' 
+cloud_name='<seu nome do cloudinary>'
+api_key='<sua api key do cloudinary>'
+api_secret='<sua secret api do cloudinary>'
 
 # Executando o aplicativo no terminal de dentro do diretorio raiz do projeto
 npm start
-    ou
+ou
 nodemon index
