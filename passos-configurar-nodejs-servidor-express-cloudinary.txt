@@ -1,0 +1,167 @@
+Passos para configurar o Node.js
+
+C:\Users\wilton>node -v
+
+C:\Users\wilton>npm -v
+
+C:\Users\wilton>npm install express --save
+
+C:\Users\wilton>npm install nodemon --save-dev
+
+C:\Users\wilton>npm install cloudinary --save
+
+C:\Users\wilton>npm install --save body-parser
+
+C:\Users\wilton>npm install dotenv --save
+
+--criando agora um servidor com node js
+
+C:\Users\wilton>d:
+
+D:\>cd projetos
+
+D:\projetos>mkdir server-tutorial
+
+D:\projetos>cd server-tutorial
+
+D:\projetos\server-tutorial>
+
+
+D:\projetos\server-tutorial>npm init
+
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help init` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg>` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (server-tutorial)
+version: (1.0.0)
+description:
+entry point: (index.js)
+test command:
+git repository:
+keywords:
+author:
+license: (ISC)
+About to write to D:\projetos\server-tutorial\package.json:
+
+{
+  "name": "server-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+
+
+Is this OK? (yes)
+
+D:\projetos\server-tutorial>type nul > index.js
+
+//abra o index.js e crie o servidor com o codigo abaixo
+//const http = require('http');
+//const server = http.createServer(
+//    (request, response) => {
+//    response.end('Olá! Esta é a resposta do seu servidor!');
+//  }
+//  );
+//server.listen(3000);
+
+D:\projetos\server-tutorial>node index.js
+
+D:\projetos\server-tutorial>type nul > app.js
+
+//abra o app.js e crie o servidor com o codigo abaixo
+const express = require('express');
+const app = express();
+module.exports = app;
+
+//depois volte pro index.js e import o app.js criado
+const app = require('./app');
+
+
+D:\projetos\server-tutorial>npm config get prefix
+//agora pegue o caminho de configuração do npm e set ele no comando abaixo
+set PATH=%PATH%;caminho;
+set PATH=%PATH%;C:\Users\wilton\AppData\Roaming\npm;
+D:\projetos\server-tutorial>set PATH=%PATH%;C:\Users\wilton\AppData\Roaming\npm;
+
+//depois instale o nodemon de forma global
+D:\projetos\server-tutorial>npm install -g nodemon
+
+//execute o novo servidor com express usando o comando 
+D:\projetos\server-tutorial>nodemon index
+
+//cole o codigo abaixo no index.js para deixar seu servidor mais robusto.
+
+const http = require('http');
+const app = require('./app');
+
+const normalizePort = val => {
+  const port = parseInt(val, 10);
+
+  if (isNaN(port)) {
+    return val;
+  }
+  if (port >= 0) {
+    return port;
+  }
+  return false;
+};
+const port = normalizePort(process.env.PORT || '3000');
+app.set('port', port);
+
+const errorHandler = error => {
+  if (error.syscall !== 'listen') {
+    throw error;
+  }
+  const address = server.address();
+  const bind = typeof address === 'string' ? 'pipe ' + address : 'port: ' + port;
+  switch (error.code) {
+    case 'EACCES':
+      console.error(bind + ' requires elevated privileges.');
+      process.exit(1);
+      break;
+    case 'EADDRINUSE':
+      console.error(bind + ' is already in use.');
+      process.exit(1);
+      break;
+    default:
+      throw error;
+  }
+};
+
+const server = http.createServer(app);
+
+server.on('error', errorHandler);
+server.on('listening', () => {
+  const address = server.address();
+  const bind = typeof address === 'string' ? 'pipe ' + address : 'port ' + port;
+  console.log('Listening on ' + bind);
+});
+
+server.listen(port);
+
+//depois instale o cloudnary de forma global
+D:\projetos\server-tutorial>npm install -g cloudinary
+
+D:\projetos\server-tutorial>npm install cloudinary --save-dev
+
+//execute o novo servidor com express usando o comando 
+D:\projetos\server-tutorial>nodemon index
+
+//instalação da biblitoeca para ocultar variaveis
+D:\projetos\server-tutorial>npm install -g dotenv
+
+D:\projetos\server-tutorial>npm install --save dotenv
+D:\projetos\server-tutorial>npm install --save-dev dotenv
+
