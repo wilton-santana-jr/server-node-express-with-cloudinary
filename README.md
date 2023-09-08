@@ -19,7 +19,7 @@ npm install
 
 # Crie um arquivo na raiz do projeto chamado .env e configure o arquivo .env em um editor de texto para adicionar as variáveis de ambiente do cloudinary
 
-```python
+```bash
 cloud_name='<seu nome do cloudinary>'
 api_key='<sua api key do cloudinary>'
 api_secret='<sua secret api do cloudinary>'
