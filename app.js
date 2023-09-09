@@ -10,9 +10,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 //cloudinary.config({ 
-//  cloud_name: 'driib5ksx', 
-//  api_key: '995935368578545', 
-//  api_secret: 'x2sJ-G1mKChNxJwCHb1wD4UXObw' 
+//  cloud_name: '', 
+//  api_key: '', 
+//  api_secret: '' 
 //});
 cloudinary.config({ 
   cloud_name: process.env.cloud_name, 
