@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "index.js", // ou o arquivo que inicia seu servidor Express
+      "src": "index.js",  // ou o arquivo que inicia seu servidor Express
       "use": "@now/node"
     }
   ],
