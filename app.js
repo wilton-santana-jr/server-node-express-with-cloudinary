@@ -30,6 +30,10 @@ app.get("/", (request, response) => {
     response.json({ message: "Olá! Este é seu servidor express que atenderá suas requisições!" });
 });
 
+app.get("/about", (request, response) => {
+    response.json({ message: "Olá! Aqui esta teste do endpoint /about!" });
+});
+
 
 // endpoint da api para upload de uma imagem no cloudinary
 app.post("/upload-image", (request, response) => {
