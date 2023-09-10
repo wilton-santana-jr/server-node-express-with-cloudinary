@@ -16,6 +16,10 @@
       "dest": "/public/images/$1"
     },
     {
+      "src": "/images/(.*)", // Rota para acessar diretamente as imagens
+      "dest": "/public/images/$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "/index.js"
     }
