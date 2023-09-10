@@ -3,15 +3,11 @@
   "builds": [
     {
       "src": "index.js", 
-      "use": "@now/node"
+      "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-<<<<<<< HEAD
-      "src": "/(.*)",
-      "dest": "/"
-=======
       "src": "^/api/.*",
       "dest": "/index.js"
     },
@@ -20,13 +16,12 @@
       "dest": "/public/images/$1"
     },
     {
-      "src": "/images/(.*)",
+      "src": "/images/(.*)", // Rota para acessar diretamente as imagens
       "dest": "/public/images/$1"
     },
     {
       "src": "/(.*)",
       "dest": "/index.js"
->>>>>>> 89d26ea73dc97762b557059289e3009d68e62889
     }
   ]
 }
