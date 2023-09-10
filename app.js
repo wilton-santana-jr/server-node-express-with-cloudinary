@@ -14,6 +14,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //  api_key: '', 
 //  api_secret: '' 
 //});
+console.log('variaveis de ambiente');
+console.log(process.env.api_secret);
+console.log(process.env.api_key);
+console.log(process.env.cloud_name);
+
 cloudinary.config({ 
   cloud_name: process.env.cloud_name, 
   api_key: process.env.api_key, 
@@ -31,7 +36,11 @@ app.get("/", (request, response) => {
 });
 
 app.get("/about", (request, response) => {
-    response.json({ message: `Olá! Aqui está um teste do endpoint about! - cloud_name: ${process.env.cloud_name} - api_key: process.env.api_key, api_secret: process.env.api_secret ` });
+    response.json({ message: `Olá! Aqui está um teste do endpoint about! - cloud_name: ${process.env.cloud_name} - api_key: ${process.env.api_key}, api_secret: ${process.env.api_secret} ` });
+});
+
+app.get("/about", (request, response) => {
+    response.json({ message: `Olá! Aqui está um teste do endpoint about! - cloud_name: ${process.env.cloud_name} - api_key: ${process.env.api_key}, api_secret: ${process.env.api_secret} ` });
 });
 
 // endpoint da api para upload de uma imagem no cloudinary
