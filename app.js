@@ -35,6 +35,11 @@ app.get("/about", (request, response) => {
 });
 
 
+app.get("/about", (request, response) => {
+    response.json({ message: "Olá! Aqui esta teste do endpoint /about!" });
+});
+
+
 // endpoint da api para upload de uma imagem no cloudinary
 app.post("/upload-image", (request, response) => {
 	
