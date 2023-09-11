@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //  api_key: '', 
 //  api_secret: '' 
 //});
-//console.log('variaveis de ambiente');
+// console.log('variaveis de ambiente');
 //console.log(process.env.api_secret);
 //console.log(process.env.api_key);
 //console.log(process.env.cloud_name);
