@@ -10,7 +10,7 @@
     //{
     //  "src": "^/api/.*",
     //  "dest": "/index.js"
-    //},
+    //}, 
     {
       "src": "^/images/(.*)",
       "dest": "/public/images/$1"
